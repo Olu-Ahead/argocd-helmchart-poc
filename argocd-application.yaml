@@ -20,6 +20,8 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true  # This automatically creates the namespace if it doesn't exist
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
     automated:
       prune: true
       selfHeal: true
